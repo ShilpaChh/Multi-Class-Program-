@@ -1,0 +1,33 @@
+require "diary"
+
+RSpec.describe Diary do
+
+    context "Diary initially" do
+        it "Diary has an empty list of entries" do
+            diary = Diary.new
+            expect(diary.all).to eq []
+        end
+    end
+
+    context "When the count word is zero" do
+        it "has a word count of 0" do
+            diary = Diary.new
+            expect(diary.count_words).to eq 0
+        end 
+    end
+
+    context "When the reading time is zero" do
+        it "has a reading time of 0" do
+            diary = Diary.new
+            expect(diary.reading_time(2)).to eq 0
+        end 
+    end
+
+    context "Readable entry is nil" do
+        it "has a best readable entry of nil" do
+            diary = Diary.new
+            expect(diary.find_best_entry_for_reading_time(2, 1)).to eq nil
+        end 
+    end
+
+  end
