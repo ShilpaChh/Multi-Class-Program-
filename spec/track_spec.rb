@@ -3,7 +3,7 @@
 
 require "track"
 
-RSpec.describe Track do
+RSpec.describe "MusicTrack" do
 
     context "shows track and artist" do
         it "contructs - shows track and artist" do
